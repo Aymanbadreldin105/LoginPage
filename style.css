@@ -29,7 +29,7 @@
 	    position: relative;
 	    z-index: 3;
 	    display: flex;
-	    width: 500px;
+	    min-width: 500px;
 	    padding: 30px;
 	    border: none;
 	    border-radius: 4px;
@@ -39,7 +39,14 @@
 	    flex-wrap: wrap;
 	    align-items: center;  
       }
-
+@media(max-width: 400px) {
+   .container{
+    	padding: 15px
+    }
+  .login-box {
+   max-width:70%;
+  }
+} 
     .header {
       color: var(--color);
       font-size: 25px;
@@ -59,7 +66,6 @@
 
     input[type="checkbox"] {
       margin: 0.5rem;
-      margin-left:0px
     }
 
     .flexcheckbox {
@@ -118,7 +124,6 @@
       transform: translate(-50%, 25%) rotate(-12deg) skew(-12deg);
   
     }
-
     .box {
       width: 100px;
       height: 60px;
