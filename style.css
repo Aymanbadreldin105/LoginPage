@@ -59,6 +59,7 @@
 
     input[type="checkbox"] {
       margin: 0.5rem;
+      margin-left:0px
     }
 
     .flexcheckbox {
