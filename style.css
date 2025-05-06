@@ -167,7 +167,7 @@
       }
     }
 
-@media (min-width: 601px) and (max-width: 1024px) {
+@media (max-width: 601px)  {
 .login-box {
 max-width: 70%;
 padding: 1.8rem;
@@ -178,7 +178,7 @@ font-size: 1.6rem;
 }
 
 .grid-background {
-transform: translateX(-50%) rotate(-6deg); /\* تقليل التحويل \*/
+transform: translateX(25%) rotate(-6deg); /\* تقليل التحويل \*/
 }
 }
 
