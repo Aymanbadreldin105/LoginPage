@@ -173,11 +173,6 @@ input[type="checkbox"] {
     }
 
 @media (max-width: 600px) {
-  .login-box {
-    width: 100%; /* أفضل من max-width */
-    padding: 1rem;
-    box-shadow: none; /* لتقليل الثقل البصري على شاشات صغيرة */
-  }
 
   .header {
     font-size: 1.2rem;
