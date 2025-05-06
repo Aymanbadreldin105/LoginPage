@@ -39,14 +39,6 @@
 	    flex-wrap: wrap;
 	    align-items: center;  
       }
-@media screen and (max-width: 400px) {
-   .container{
-    	padding: 15px
-    }
-  .login-box {
-   max-width:95%;
-  }
-} 
     .header {
       color: var(--color);
       font-size: 25px;
@@ -175,3 +167,27 @@
       }
     }
 
+@media (min-width: 601px) and (max-width: 1024px) {
+.login-box {
+max-width: 70%;
+padding: 1.8rem;
+}
+
+.header {
+font-size: 1.6rem;
+}
+
+.grid-background {
+transform: translateX(-50%) rotate(-6deg); /\* تقليل التحويل \*/
+}
+}
+
+@media (min-width: 1025px) {
+.login-box {
+max-width: 500px;
+}
+
+.grid-background {
+transform: translate(-50%, 10%) rotate(-12deg) skew(-12deg); /\* التحويل الأصلي للشاشات الكبيرة \*/
+}
+}
