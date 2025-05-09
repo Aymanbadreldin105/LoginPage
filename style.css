@@ -54,32 +54,40 @@
       margin-top:.2rem; 
       min-width: 100%;
     }
-
-input[type="Email"],
+input[type="email"],
 input[type="password"] {
-width: 100%;
-padding: 10px;
-margin-bottom: 15px;
-border: 1px solid #ccc;
-border-radius: 3px;
-box-sizing: border-box;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="email"]:focus,
+input[type="password"]:focus {
+  border-color: var(--color);
+  outline: none;
+  box-shadow: 0 0 5px rgba(84, 105, 212, 0.5);
 }
 
 input[type="submit"] {
-background-color: var(--color);
-color: white;
-margin: 0.5rem 1rem;
-padding: 1.3rem 1rem;
-border: none;
-border-radius: 3px;
-cursor: pointer;
-width: 90%;
+  background-color: var(--color);
+  color: white;
+  margin: 0.5rem 1rem;
+  padding: 1.3rem 1rem;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  width: 90%;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 input[type="submit"]:hover {
-background-color: #45a049;
+  background-color: #45a049;
+  transform: scale(1.05);
 }
-
 input[type="checkbox"] {
       margin: 0.5rem;
     }
@@ -178,6 +186,9 @@ input[type="checkbox"] {
     }
 
 @media (max-width: 600px) {
+*{
+	font-size: 35px;
+}
   .container.login-box {
     width: 100%; /* أفضل من max-width */
     padding: 1rem;
