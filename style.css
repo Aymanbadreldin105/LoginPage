@@ -200,10 +200,10 @@ input[type="checkbox"] {
   }
 
   .input, input[type="submit"] {
-        width: 90%;
+        width: 100%!important;
         margin: 0.5rem;
-        padding: .8rem;
-        font-size: 1.2rem;
+        padding: 1.8rem !important;
+        font-size: 1.2rem !important;
 
   }
 
@@ -211,7 +211,7 @@ input[type="checkbox"] {
       margin: 0.5rem;
     }
   .grid-background {
-    transform: translate(-50%, 30%) rotate(-6deg);
+    transform: translate(-50%, 20%) rotate(-6deg);
   }
 
   .link {
