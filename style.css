@@ -30,7 +30,6 @@ body {
   position: relative;
   z-index: 3;
   display: flex;
-  max-width: 500px; /* تحسين العرض */
   width: 90%; /* عرض نسبي */
   padding: 30px;
   margin: 1.5rem auto;
