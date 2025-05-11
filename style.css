@@ -30,7 +30,7 @@ body {
   position: relative;
   z-index: 3;
   display: flex;
-  max-width: 400px; /* تحسين العرض */
+  max-width: 500px; /* تحسين العرض */
   width: 90%; /* عرض نسبي */
   padding: 30px;
   margin: 1.5rem auto;
@@ -64,7 +64,7 @@ body {
 input[type="email"],
 input[type="password"] {
   width: 100%;
-  padding: 15px; /* زيادة المساحة داخل الإدخال */
+  padding: 10px; /* زيادة المساحة داخل الإدخال */
   margin-bottom: 15px;
   border: 1px solid #ccc;
   border-radius: 3px;
@@ -84,7 +84,7 @@ input[type="submit"] {
   background-color: var(--color);
   color: white;
   margin: 0.5rem 1rem;
-  padding: 1.5rem; /* زيادة المساحة الداخلية */
+  padding: .8rem; /* زيادة المساحة الداخلية */
   border: none;
   border-radius: 3px;
   font-size: 18px; /* تكبير النص */
@@ -211,8 +211,8 @@ a {
   .input, input[type="submit"] {
     width: 90%; 
     margin: 0.5rem;
-    padding: 0.8rem;
-    font-size: 1.2rem;
+    padding: 2.8rem;
+    font-size:18px;
   }
 
   input[type="checkbox"] {
