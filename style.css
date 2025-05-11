@@ -1,188 +1,234 @@
 :root {
   --color: rgb(84, 105, 212);
-  --input-padding: 12px;
-  --box-shadow: 0 4px 12px rgba(84, 105, 212, 0.2);
 }
 
 * {
   padding: 0;
   margin: 0;
+  color: #1a1f36;
   box-sizing: border-box;
+  word-wrap: break-word;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Ubuntu, sans-serif;
 }
 
 body {
-  background-color: #f5f7fa;
-  min-height: 100vh;
+  background-color: #ffffff;
   display: flex;
+  height: 100vh;
+  overflow-x: hidden;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 20px;
-  color: #1a1f36;
 }
 
 .container {
-  width: 100%;
-  max-width: 480px;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  padding: 30px;
+  max-width: 100%;
 }
 
 .login-box {
-  width: 100%;
-  padding: 30px;
-  margin-bottom: 20px;
-  background-color: #fff;
-  border-radius: 8px;
-  box-shadow: var(--box-shadow);
   position: relative;
   z-index: 3;
+  display: flex;
+  max-width: 400px; /* تحسين العرض */
+  width: 90%; /* عرض نسبي */
+  padding: 30px;
+  margin: 1.5rem auto;
+  border: none;
+  border-radius: 4px;
+  background-color: #fff;
+  box-shadow: -1px -1px 20px rgba(84, 105, 212, 0.9);
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.form-group {
+  max-width: 100%;
+  margin-bottom: 20px; /* تحسين المسافات بين الحقول */
 }
 
 .header {
   color: var(--color);
-  font-size: 24px;
+  font-size: 30px; /* تكبير حجم العنوان */
   font-weight: 700;
-  margin-bottom: 24px;
   text-align: center;
 }
 
-.form-group {
-  width: 100%;
-}
-
 .lable {
-  display: block;
-  margin-bottom: 8px;
-  font-weight: 500;
+  text-align: left;
+  margin-top: 0.2rem;
+  min-width: 100%;
 }
 
-.input {
+input[type="email"],
+input[type="password"] {
   width: 100%;
-  padding: var(--input-padding);
-  margin-bottom: 16px;
-  border: 1px solid #e1e4e8;
-  border-radius: 6px;
-  font-size: 14px;
-  transition: all 0.3s ease;
+  padding: 15px; /* زيادة المساحة داخل الإدخال */
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  box-sizing: border-box;
+  font-size: 16px; /* تكبير النص */
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-.input:focus {
+input[type="email"]:focus,
+input[type="password"]:focus {
   border-color: var(--color);
   outline: none;
-  box-shadow: 0 0 0 3px rgba(84, 105, 212, 0.2);
+  box-shadow: 0 0 5px rgba(84, 105, 212, 0.5);
 }
 
 input[type="submit"] {
-  width: 100%;
-  padding: var(--input-padding);
   background-color: var(--color);
   color: white;
+  margin: 0.5rem 1rem;
+  padding: 1.5rem; /* زيادة المساحة الداخلية */
   border: none;
-  border-radius: 6px;
-  font-size: 16px;
-  font-weight: 600;
+  border-radius: 3px;
+  font-size: 18px; /* تكبير النص */
   cursor: pointer;
-  margin-top: 10px;
-  transition: background-color 0.3s ease;
+  width: 90%;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 input[type="submit"]:hover {
-  background-color: rgb(64, 85, 192);
+  background-color: #45a049;
+  transform: scale(1.05);
+}
+
+input[type="checkbox"] {
+  margin: 0.5rem;
 }
 
 .flexcheckbox {
   display: flex;
+  justify-content: flex-start;
   align-items: center;
-  margin: 15px 0;
-}
-
-.flexcheckbox input {
-  margin-right: 8px;
-}
-
-.link {
-  text-align: center;
-  margin: 15px 0;
-  color: #666;
-}
-
-.link a {
-  color: var(--color);
-  font-weight: 600;
 }
 
 .flex {
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin-top: 20px;
+  align-items: center;
 }
 
-.flex span {
-  margin: 0 10px;
+span {
+  display: inline-block;
+  margin: 0 5px;
+  cursor: pointer;
 }
 
-.flex a {
-  color: #666;
-  font-size: 14px;
+.link {
+  text-align: center;
+  margin: 1rem;
+  font-size: 1.5rem;
+  color: #0277BD;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color);
+  margin: 5px;
+  font-size: 1rem; /* تحسين الحجم */
+  font-weight: 600;
 }
 
 .grid-background {
   position: fixed;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  overflow: hidden;
   display: flex;
   flex-wrap: wrap;
-  transform: rotate(-12deg);
+  align-content: flex-start;
+  flex-direction: column;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+  transform: translate(-50%, 25%) rotate(-12deg) skew(-12deg);
 }
 
 .box {
   width: 100px;
   height: 60px;
-  opacity: 0.2;
 }
 
-/* تحسينات للشاشات الصغيرة */
+.bg1 {
+  background-color: #60a5fa;
+  animation: float 6s infinite linear;
+}
+
+.bg2 {
+  background-color: #facc15;
+  animation: ltri 3s infinite linear;
+}
+
+.bg3 {
+  background-color: #4ade80;
+  animation: float 5s infinite linear;
+}
+
+.bg4 {
+  animation: ltri 4s infinite linear;
+  background-color: #f472b6;
+}
+
+@keyframes float {
+  0% {
+    transform: scaleX(1);
+  }
+  50% {
+    transform: scaleX(16);
+  }
+  100%, 0% {
+    transform: translateX(-100px);
+  }
+}
+
+@keyframes ltri {
+  0%, 100% {
+    transform: translateX(-900px);
+  }
+  50% {
+    transform: translateX(100px);
+  }
+  100%, 0% {
+    transform: translateX(1000px);
+  }
+}
+
 @media (max-width: 600px) {
   .login-box {
-    padding: 20px;
+    width: 100%; ! importnt
+    padding: 1rem;
   }
-  
+
   .header {
-    font-size: 20px;
+    font-size: 1.2rem;
+    text-align: center;
   }
-  
+
   .input, input[type="submit"] {
-    padding: 10px;
+    width: 90%; 
+    margin: 0.5rem;
+    padding: 0.8rem;
+    font-size: 1.2rem;
   }
-  
+
+  input[type="checkbox"] {
+    margin: 0.5rem;
+  }
+
   .grid-background {
-    transform: rotate(-8deg);
+    transform: translate(-50%, 30%) rotate(-6deg);
   }
-}
 
-/* تحسينات للشاشات الكبيرة */
-@media (min-width: 1024px) {
-  .container {
-    max-width: 500px;
+  .link {
+    font-size: 1rem;
+    margin: 0.5rem;
   }
-}
 
-/* تحسينات للتوجيه الأفقي على الأجهزة المحمولة */
-@media (max-height: 500px) {
-  body {
-    padding: 10px;
-  }
-  
-  .login-box {
-    padding: 15px;
+  a {
+    font-size: 1rem;
   }
 }
